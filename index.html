@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>曲名わかるかな</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <!-- タイトル -->
+      <div class="title">
+        <h1 class="heading-title">曲名わかるかな？</h1>
+      </div>
+
+      <!-- ルール説明 -->
+      <div class="rules">
+        <ol>
+          <li>「スタート」を押して曲を聴く</li>
+          <li>曲名がわかったら「ストップ」を押す</li>
+          <li>曲名を回答欄に記入</li>
+          <li>ファイナルアンサー！</li>
+          </ol>
+      </div>
+      
+      <!-- スタート・ストップボタン -->
+      <div class="btns">
+        <button class="btns-text" id="start" onclick="playRandomSong()">スタート</button>
+        <button class="btns-text" id="stop" onclick="pauseSong()">ストップ</button>
+        <button class="btns-text" id="reset" onclick="resetQuiz()">リセット</button>
+      </div>
+
+      <!-- イントロ再生 -->
+      <audio src="" id="audio-player"></audio>
+
+      <!-- 回答欄 -->
+      <div class="answers">
+        <input
+          type="text"
+          id="keyword"
+          class="input-answer"
+          placeholder="曲名を入力（正確に！）"
+        />
+        <button id="btn" class="final-answer" onclick="quizResult()">ファイナルアンサー</button>
+      </div>
+
+      <!-- 結果 -->
+      <div id="result-all">
+        <p id="result" class="quiz-result"></p>
+
+        <div id="song-answer">
+          <h2 id="song-title"></h2>
+          <h3 id="artist-name"></h3>
+          <img id="artwork" alt="">
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/sampleJSON.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

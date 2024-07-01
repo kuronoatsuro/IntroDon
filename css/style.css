@@ -1,0 +1,149 @@
+/* 全体の体裁 */
+html{
+  line-height: 1.5;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255,255,255,0.8);
+  background-blend-mode: lighten;
+  margin: 0;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* タイトル */
+.heading-title{
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ルール */
+.rules{
+  font-size: 20px;
+  margin: auto;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ボタン */
+.btns {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  max-width: 320px;
+  height: 64px;
+  padding: 3px;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  overflow-wrap: anywhere;
+  background: linear-gradient(135deg, #6fa24a, #15a1cc);
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+}
+
+.btns::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(135deg, #6fa24a, #15a1cc);
+  filter: blur(8px);
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+  opacity: 0;
+}
+
+.btns-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #222;
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+  font-size: 20px;
+}
+
+@media (any-hover: hover) {
+  .btns::before {
+    transition: opacity 0.2s;
+    will-change: filter;
+  }
+
+  .btns:hover::before {
+    opacity: 1;
+  }
+} 
+
+/* 回答欄 */
+.answers {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+} 
+
+.input-answer{
+  padding: 5px;
+  width: 400px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+.final-answer {
+  padding: 5px;
+  margin-left: 8px;
+  border: none;
+  background-color: #3745dd;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+/* 結果 */
+.quiz-result {
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+}
+
+img {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 220px;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-align: center;
+}
